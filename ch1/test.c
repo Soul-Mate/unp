@@ -1,7 +1,9 @@
 #include "unp.h"
-
+#include "unp_wsock.h"
 int main(void)
 {
-    err_quit("hello world\n");
+	int fd;
+	fd = Socket(AF_INET,SOCK_STREAM,NULL);
+    printf("%d\n", fd);
     return 0;
 }

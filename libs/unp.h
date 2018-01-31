@@ -9,7 +9,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-
+#include <unistd.h>
+#include <sys/types.h>
 #define MAXLINE 4096
 
 void	 err_dump(const char *, ...);

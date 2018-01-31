@@ -1,3 +1,5 @@
-ADD_EXECUTABLE(test test.c)
+ADD_EXECUTABLE(daytimetcpsrv daytimetcpsrv.c)
+TARGET_LINK_LIBRARIES(daytimetcpsrv unp)
 
-TARGET_LINK_LIBRARIES(test unp)
+ADD_EXECUTABLE(daytimetcpcli daytimetcpcli.c)
+TARGET_LINK_LIBRARIES(daytimetcpcli unp)
