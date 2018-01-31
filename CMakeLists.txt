@@ -1,0 +1,24 @@
+PROJECT(unp)
+
+SET(CMAKE_MINIMUM_REQUIRED_VERSION 2.8)
+
+# add some macro define
+# if define  DEBUG, will see debug info
+ADD_DEFINITIONS(-DDEBUG -D_GNU_SOURCE)
+
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/libs)
+
+# lib dir
+SET(LIB_DIR ${PROJECT_SOURCE_DIR}/libs)
+
+# set libs output dir
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/libs)
+
+# set bin output dir
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+
+
+SET(LIBUNP_SRC ${LIB_DIR}/unp_err.c)
+ADD_LIBRARY(unp SHARED ${LIBUNP_SRC})
+
+ADD_SUBDIRECTORY(ch1)

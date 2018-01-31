@@ -1,0 +1,3 @@
+ADD_EXECUTABLE(test test.c)
+
+TARGET_LINK_LIBRARIES(test unp)
