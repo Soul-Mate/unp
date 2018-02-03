@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	bzero(&cliaddr,sizeof(cliaddr));
 	cliaddr.sin_family = AF_INET;
-	cliaddr.sin_port = htons(3245);
+	cliaddr.sin_port = htons(9999);
 	inet_pton(AF_INET,argv[1],&cliaddr.sin_addr);
 	
 	Connect(sockfd,(struct sockaddr *)&cliaddr,sizeof(cliaddr));

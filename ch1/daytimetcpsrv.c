@@ -15,7 +15,7 @@ int main(int argc, const char *argv[])
 	bzero(&srvaddr,sizeof(srvaddr));
 	srvaddr.sin_family = AF_INET;
 	srvaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	srvaddr.sin_port = htons(3245);
+	srvaddr.sin_port = htons(9999);
 
 	Bind(sockfd,(struct sockaddr *)&srvaddr,sizeof(srvaddr));
 

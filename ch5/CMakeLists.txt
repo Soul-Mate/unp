@@ -1,0 +1,7 @@
+ADD_EXECUTABLE(tcpsrv01 tcpsrv01.c)
+TARGET_LINK_LIBRARIES(tcpsrv01 unp)
+
+
+ADD_EXECUTABLE(tcpcli01 tcpcli01.c)
+TARGET_LINK_LIBRARIES(tcpcli01 unp)
+
