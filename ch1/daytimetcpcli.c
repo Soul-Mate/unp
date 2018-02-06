@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	int sockfd,n;
 	char buf[1024];
 	struct sockaddr_in cliaddr;
-	sockfd = Socket(AF_INET,SOCK_STREAM,NULL);
+	sockfd = Socket(AF_INET,SOCK_STREAM,0);
 
 	bzero(&cliaddr,sizeof(cliaddr));
 	cliaddr.sin_family = AF_INET;

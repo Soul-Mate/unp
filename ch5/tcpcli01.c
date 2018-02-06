@@ -17,7 +17,7 @@ int main(int argc, const char *argv[])
     bzero(&cliaddr,sizeof (cliaddr));
     
     cliaddr.sin_family = AF_INET;
-    cliaddr.sin_port = htons(5001);
+    cliaddr.sin_port = htons(5002);
     inet_pton(AF_INET,srvip,&cliaddr.sin_addr);
     
     Connect(sockfd,(struct sockaddr *)&cliaddr, sizeof(cliaddr));
@@ -30,7 +30,7 @@ static void echo(int fd)
     char send_buf[MAXLINE];
     char recv_buf[MAXLINE];
     
-    while (fgets(send_buf,MAXLINE,stdin) > 0) {
+    while (fgets(send_buf,MAXLINE,stdin) != NULL) {
         Writen(fd,send_buf,strlen(send_buf));
         if (Readline(fd,recv_buf,MAXLINE) == 0) {
             err_sys("prematurely");

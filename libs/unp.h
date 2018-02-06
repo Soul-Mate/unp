@@ -15,6 +15,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #define MAXLINE 4096
+#define	max(a,b)	((a) > (b) ? (a) : (b))
 
 void	 err_dump(const char *, ...);
 void	 err_msg(const char *, ...);

@@ -18,7 +18,7 @@ SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 SET(LIBUNP_SRC ${LIB_DIR}/unp_err.c ${LIB_DIR}/unp_wsock.c
         ${LIB_DIR}/unp_readline.c ${LIB_DIR}/unp_readn.c
-        ${LIB_DIR}/unp_writen.c)
+        ${LIB_DIR}/unp_writen.c ${LIB_DIR}/unp_wunix.c)
 
 ADD_LIBRARY(unp SHARED ${LIBUNP_SRC})
 
